@@ -1,10 +1,15 @@
-"use client"
+"use client";
 
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
+interface User {
+  id: string;
+  name: string;
+}
+
 const UsersList = () => {
-  const [users, setUsers] = useState<any[]>([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
