@@ -25,3 +25,29 @@ body {
     text-wrap: balance;
   }
 }
+
+
+@keyframes bubble-move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bubble-flicker {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-bubble {
+  animation: bubble-move linear infinite, bubble-flicker ease-in-out infinite;
+}
